@@ -54,7 +54,7 @@
 
             <div class="my-14 mt-[10vh] sm:mt-[5vh] ml-6 animate-fadeInfromLeft transition duration-300 delay-100 ">
                 <a href="{{route('add')}}" wire:navigate class="mr-4 max-sm:px-[0.5rem] px-7 text-xl text-center max-sm:text-[14px] bg-cyan-700 text-white p-4 rounded font-bold hover:text-cyan-700 hover:bg-white transition duration-500 ease-in-out cursor-pointer">Add New Task</a>
-                <a class="mr-4 max-sm:px-[0.5rem]  px-7 text-xl text-center max-sm:text-[14px]  bg-cyan-700 text-white p-4 rounded font-bold hover:text-cyan-700 hover:bg-white transition duration-500 ease-in-out cursor-pointer">View All Tasks</a>
+                <a href="{{route('show')}}" wire:navigate class="mr-4 max-sm:px-[0.5rem]  px-7 text-xl text-center max-sm:text-[14px]  bg-cyan-700 text-white p-4 rounded font-bold hover:text-cyan-700 hover:bg-white transition duration-500 ease-in-out cursor-pointer">View All Tasks</a>
             </div>
         </div>
 

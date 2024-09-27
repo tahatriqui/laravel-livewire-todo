@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TodoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/add', 'Pages.newTask')->name('add');
+Route::get('/add',[TodoController::class, 'index'])->name('add')->middleware('auth');
+Route::get('/tasks',[TodoController::class, 'show'])->name('show')->middleware('auth');
 Route::view('/', 'welcome')->name('home');
 
 Route::view('dashboard', 'dashboard')

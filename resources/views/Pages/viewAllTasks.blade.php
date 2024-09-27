@@ -1,7 +1,8 @@
 @extends('layouts.app')
-@section("title",'new task')
+@section("title",'tasks')
 @section('content')
 
-<livewire:todo>
+
+<livewire:viewtodo>
 
 @endsection
