@@ -14,4 +14,8 @@ class TodoController extends Controller
     {
         return view('Pages.viewAllTasks');
     }
+    public function update($id)
+    {
+        return view('Pages.update',compact('id'));
+    }
 }

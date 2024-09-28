@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TodoController;
+use App\Livewire\UpdateTodo;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/add',[TodoController::class, 'index'])->name('add')->middleware('auth');
 Route::get('/tasks',[TodoController::class, 'show'])->name('show')->middleware('auth');
+Route::get('/tasks/{id}',[TodoController::class, 'update'])->name('update')->middleware('auth');
 Route::view('/', 'welcome')->name('home');
 
 Route::view('dashboard', 'dashboard')

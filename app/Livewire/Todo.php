@@ -24,7 +24,8 @@ class Todo extends Component
         ]);
 
         session()->flash('message', 'task successfully created.');
-        return redirect()->route('show');
+        // return redirect()->route('show');
+        $this->redirectRoute('show');
         // Reset the form fields
          $this->reset(['todo']);
 
