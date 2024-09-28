@@ -28,6 +28,13 @@ class Viewtodo extends Component
             $todo->save();
         }
     }
+    public function delete($id)
+    {
+        $this->todoId = $id;
+        $todo = Todo::find($this->todoId);
+       $todo->delete();
+        session()->flash('delete', 'Task successfully deleted.');
+    }
 
     public function render()
     {
