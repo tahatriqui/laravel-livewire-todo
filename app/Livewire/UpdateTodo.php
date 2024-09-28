@@ -9,10 +9,10 @@ class UpdateTodo extends Component
     public $todoId;
     public $todo;
     public $todoValue;
-    
+
     public function mount($id){
         $this->todoId = $id;
-        $this->todoValue = Todo::find($todoId);
+        $this->todoValue = Todo::find($this->todoId);
     }
     public function update($id){
         $this->validate();
@@ -26,7 +26,7 @@ class UpdateTodo extends Component
         session()->flash('message', 'task successfully updated.');
         // return redirect()->route('show');
         $this->redirectRoute('show');
-        
+
               }
     public function render()
     {
